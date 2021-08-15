@@ -6,11 +6,13 @@
 <!--[if IE 8]>
 <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang=""> <!--<![endif]-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta http-equiv="Content-Language" content="en-us"/>
+  <meta http-equiv="Content-Language" content="en-us" />
   <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -22,52 +24,79 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Pacifico&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Pacifico&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 </head>
+
 <body>
 
-<!-- Header -->
-<header>
-  <nav class="navbar fix__top">
-    <div class="container">
-      <div class="navbar__logo">
-        <h1>Brandi</h1>
-        <p>I'am your tag line</p>
+  <!-- Header -->
+  <header>
+    <nav class="navbar fix__top">
+      <div class="container">
+        <div class="navbar__logo">
+          <h1>Brandi</h1>
+          <p>I'am your tag line</p>
+        </div>
+        <div class="navbar__menu">
+          <ul class="none">
+            <li>Home</li>
+            <li>Features</li>
+            <li>Work</li>
+            <li>Team</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="navbar__sidebar">
+          <i class="fas fa-align-justify open active"></i>
+          <i class="fa fa-times closes" aria-hidden="true"></i>
+        </div>
       </div>
-      <div class="navbar__menu">
-        <ul class="none">
-          <li>Home</li>
-          <li>Features</li>
-          <li>Work</li>
-          <li>Team</li>
-          <li>Contact</li>
-        </ul>
+    </nav>
+  </header>
+
+  <!-- main content -->
+  <main>
+    <section class="banner">
+      <div class="banner__content">
+        <h2><span>Meet</span> Brandi!</h2>
+        <h3><span>/creative</span> one page template.</h3>
+        <p>We are team of professionals</p>
       </div>
-      <div class="navbar__sidebar">
-        <i class="fas fa-align-justify open active"></i>
-        <i class="fa fa-times closes" aria-hidden="true"></i>
+      <div class="banner__icon">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-google-plus-g"></i>
+        <i class="fab fa-dribbble"></i>
       </div>
-    </div>
-  </nav>
-</header>
+      <div class="slick">
+        <div class="slick__item">
+          <img src="./assets/img/banner.png" alt="">
+        </div>
+        <div class="slick__item">
+          <img src="http://getwallpapers.com/wallpaper/full/4/d/0/369636.jpg" alt="">
+        </div>
+        <div class="slick__item">
+          <img src="http://hdqwalls.com/wallpapers/landscape-night-moon-stars-uw.jpg" alt="">
+        </div>
+      </div>
+    </section>
+  </main>
 
-<!-- main content -->
-<main>
-  <section class="home">
+  <!-- Footer -->
+  <footer>
 
-  </section>
-</main>
+  </footer>
 
-<!-- Footer -->
-<footer>
-
-</footer>
-
-<script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
-<script src="assets/js/vendor/bootstrap.min.js"></script>
-<script src="assets/js/scripts-bundled.js"></script>
-<script src="assets/js/modules/_sidebar.js"></script>
-<script src="assets/js/modules/_scroll.js"></script>
+  <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="assets/js/scripts-bundled.js"></script>
+  <script src="assets/js/modules/_sidebar.js"></script>
+  <script src="assets/js/modules/_scroll.js"></script>
+  <script src="assets/js/modules/_banner.js"></script>
 </body>
-</html>
 
+</html>

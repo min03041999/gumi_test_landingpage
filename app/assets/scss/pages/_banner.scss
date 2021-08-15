@@ -1,0 +1,143 @@
+.banner{
+    position: relative;
+    width: 100%;
+    height: 800px;
+    text-align: center;
+    @media screen and (max-width: 767px){
+        height: 600px;
+    }
+    &__content{
+        position: absolute;
+        top: 460px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        font-family: 'Open Sans', sans-serif;
+        color: $color-default-lightest;
+        @media screen and (max-width: 767px){
+            top: 375px;
+        }
+        h2{
+            font-weight: bold;
+            @include font-size(62px);
+            margin-bottom: 35px;
+            span{
+                font-weight: 100;
+            }
+            @media screen and (max-width: 767px){
+                    @include font-size(35px);
+                    margin-bottom: 10px;
+            }
+            @media screen and (max-width: 320px){
+                @include font-size(30px);
+                margin-bottom: 10px;
+            }
+        }
+        h3{
+            @include font-size(48px);
+            color: $color-default;
+            margin-bottom: 35px;
+            span{
+                color: #0fde95;
+            }
+            @media screen and (max-width: 767px){
+                @include font-size(22px);
+                margin-bottom: 15px;
+            }
+        }
+        p{
+            position: relative;
+            @include font-size(18px);
+            &::before,&::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                background-color: #0fda93;
+                @include transform(translateY(-50%));
+                height: 1px;
+                width: 5%;
+            }
+            &::before{
+                left: 15%;
+                @media screen and (max-width: 767px){
+                    left: 5%;
+                }
+                @media screen and (max-width: 320px){
+                    left: 0;
+                }
+            }
+            &::after{
+                right: 15%;
+                @media screen and (max-width: 767px){
+                    right: 5%;
+                }
+                @media screen and (max-width: 320px){
+                    right: 0;
+                }
+            }
+            @media screen and (max-width: 767px){
+                @include font-size(13px);
+            }
+        }
+    }
+    &__icon{
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        i{
+            color: #4f565d;
+            margin-left: 15px;
+            &:hover{
+                transition: ease 0.4s;
+                color: #fff;
+            }
+        }
+    }
+    .slick {
+        &__item{
+            img{
+                width: 100%;
+                height: 800px;
+                object-fit: cover;
+                background-size: cover;
+                background-repeat: no-repeat;
+                @media screen and (max-width: 767px){
+                    height: 600px;
+                }
+            }
+        }
+        &-arrow {
+            display: none !important;
+        }
+        &-dots {
+            position: absolute;
+            top: 50%;
+            right: 40px;
+            transform: translateY(-50%);
+            list-style: none;
+            @media screen and (max-width: 767px){
+                right: 10px;
+            }
+            li {
+                cursor: pointer;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: transparent;
+                border: 1px solid $color-default;
+                margin-bottom: 15px;
+                &.slick-active {
+                    background-color: #fff;
+                }
+            }
+            button {
+                display: none !important;
+            }
+        }
+    }
+}
+
+
+ 
