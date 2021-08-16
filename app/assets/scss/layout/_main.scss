@@ -2,5 +2,47 @@
   max-width: 1200px;
   padding: 0 15px;
 }
-
-
+.common__heart{
+  font-family: 'Open Sans', sans-serif;
+  h2{
+      font-family: 'Open Sans', inherit;
+      font-weight: bold;
+      text-transform: uppercase;
+      @include font-size(28px);
+      color: #0eb493;
+      margin-bottom: 25px;
+  }
+  .heart{
+      position: relative;
+      &::before, &::after{
+          content: '';
+          position: absolute;
+          top: 50%;
+          background-color: #dce1e5;
+          transform: translateY(-50%);
+          width: 8%;
+          height: 2px;
+          @media screen and (max-width: 767px){
+              width: 45%;
+          }
+          @media screen and (max-width: 320px){
+              width: 40%;
+          }
+      }
+      &::before{
+          left: 40%;
+          @media screen and (max-width: 767px){
+              left: 0;
+          }
+      }
+      &::after{
+          right: 40%;
+          @media screen and (max-width: 767px){
+              right: 0;
+          }
+      }
+      img{
+          width: 18px;
+      }
+  }
+}
