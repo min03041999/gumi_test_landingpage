@@ -3,9 +3,8 @@
   padding: 0 15px;
 }
 .common__heart{
-  font-family: 'Open Sans', sans-serif;
   h2{
-      font-family: 'Open Sans', inherit;
+      font-family: 'Open Sans', sans-serif;
       font-weight: bold;
       text-transform: uppercase;
       @include font-size(28px);
@@ -44,5 +43,13 @@
       img{
           width: 18px;
       }
+  }
+    p{
+        font-family: inherit;
+        margin: 40px 100px 0;
+        @include font-size(18px);
+        @media screen and (max-width: 767px){
+        margin: 20px 0;
+    }
   }
 }
