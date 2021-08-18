@@ -1,0 +1,47 @@
+.fun{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    padding: 100px 0 ;
+    background: url(../img/fun.png) no-repeat center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 1024px){
+        height: 100%;
+    }
+    @media screen and (max-width: 767px){
+        height: 100%;
+    }
+    &__content{
+        display: flex;
+        flex-wrap: wrap;
+        .item{
+            margin-top: 25px;
+            width: calc(100% / 4);
+            @media screen and (max-width: 1024px){
+                margin-top: 30px;
+                width: calc(100% / 2);
+            }
+            @media screen and (max-width: 767px){
+                margin-top: 50px;
+            }
+            @media screen and (max-width: 480px){
+                width: calc(100%);
+            }
+            img{
+                margin-bottom: 50px;
+                width: 130px;
+                object-fit: cover;
+            }
+            h3{
+                color: $color-default-lightest;
+                @include font-size(60px);
+            }
+            p{  
+                color: $color-default;
+                @include font-size(18px);
+                text-transform: uppercase;
+            }
+        }
+    }
+}

@@ -9,7 +9,7 @@
       text-transform: uppercase;
       @include font-size(28px);
       color: #0eb493;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
   }
   .heart{
       position: relative;
@@ -48,10 +48,11 @@
         font-family: inherit;
         color: #062033;
         font-weight: bold;
-        margin: 40px 100px 0;
+        margin: 35px 100px 0;
         @include font-size(18px);
         @media screen and (max-width: 767px){
-        margin: 20px 0;
+            @include font-size(16px);  
+            margin: 20px 0;
     }
   }
 }
