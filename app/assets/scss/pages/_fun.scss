@@ -32,6 +32,9 @@
                 margin-bottom: 50px;
                 width: 130px;
                 object-fit: cover;
+                @media screen and (max-width: 767px){
+                    width: 90px;
+                }
             }
             h3{
                 color: $color-default-lightest;
