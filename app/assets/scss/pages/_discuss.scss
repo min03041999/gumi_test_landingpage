@@ -53,6 +53,8 @@
                 }
                 @media screen and (max-width: 767px){
                     grid-template-columns: repeat(1, 1fr);
+                    gap: 20px 30px;
+                    margin-top: 25px;
                 }
                 .item-01, .item-02, .item-03{
                     box-sizing: border-box;
@@ -81,32 +83,27 @@
                         grid-column: 1;
                     }
                 }
-            }
-            button{
-                border: none;
-                outline: none;
-                position: absolute;
-                background: transparent;
-                @include font-size(16px);
-                cursor: pointer;
-                right: 100px;
-                bottom: -37px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                column-gap: 13px;
-                @media screen and (max-width: 767px){
-                    right: 50px;
-                }
-                @media screen and (max-width: 320px){
-                    right: 25px;
-                }
-                &:hover{
-                    color: #0eb493;
-                }
-                img{
-                    width: 23px;
-                    object-fit: cover;
+                button{
+                    border: none;
+                    outline: none;
+                    position: absolute;
+                    background: transparent;
+                    @include font-size(16px);
+                    cursor: pointer;
+                    right: 12%;
+                    bottom: -37px;
+                    display: flex;
+                    padding: 0;
+                    justify-content: center;
+                    align-items: center;
+                    column-gap: 13px;
+                    &:hover{
+                        color: #0eb493;
+                    }
+                    img{
+                        width: 23px;
+                        object-fit: cover;
+                    }
                 }
             }
             &__icon {
