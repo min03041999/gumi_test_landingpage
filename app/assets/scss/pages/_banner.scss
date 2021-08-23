@@ -1,54 +1,59 @@
-.banner{
+.banner {
     position: relative;
     width: 100%;
     height: 800px;
     text-align: center;
-    @media screen and (max-width: 767px){
+    @media #{$info-phone} {
         height: 600px;
     }
-    &__content{
+    &__content {
         position: absolute;
         top: 460px;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
-        font-family: 'Open Sans', sans-serif;
         color: $color-default-lightest;
-        @media screen and (max-width: 767px){
+        @media #{$info-phone} {
             top: 375px;
         }
-        h2{
+        h2 {
             font-weight: bold;
             @include font-size(62px);
-            margin-bottom: 35px;
-            span{
+            margin-bottom: 22px;
+            span {
                 font-weight: 100;
             }
-            @media screen and (max-width: 767px){
-                    @include font-size(35px);
-                    margin-bottom: 10px;
+            @media #{$info-phone} {
+                @include font-size(35px);
+                margin-bottom: 10px;
             }
             @media screen and (max-width: 320px){
                 @include font-size(30px);
                 margin-bottom: 10px;
             }
         }
-        h3{
+        h3 {
             @include font-size(48px);
             color: $color-default;
-            margin-bottom: 35px;
-            span{
+            margin-bottom: 22px;
+            opacity: 0.9;
+            span {
                 color: #0fde95;
             }
-            @media screen and (max-width: 767px){
+            @media #{$info-phone} {
                 @include font-size(22px);
                 margin-bottom: 15px;
             }
         }
-        p{
+        p {
             position: relative;
             @include font-size(18px);
-            &::before,&::after{
+            opacity: 0.9;
+            @media #{$info-phone} {
+                @include font-size(13px);
+            }
+            &::before,
+            &::after {
                 content: "";
                 position: absolute;
                 top: 50%;
@@ -57,53 +62,57 @@
                 height: 1px;
                 width: 5%;
             }
-            &::before{
-                left: 15%;
-                @media screen and (max-width: 767px){
+            &::before {
+                left: 21%;
+                @media #{$info-tablet-horizontal} {
+                    left: 15%;
+                }
+                @media #{$info-phone} {
                     left: 5%;
                 }
                 @media screen and (max-width: 320px){
                     left: 0;
                 }
             }
-            &::after{
-                right: 15%;
-                @media screen and (max-width: 767px){
+            &::after {
+                right: 21%;
+                @media #{$info-tablet-horizontal} {
+                    right: 15%;
+                }
+                @media #{$info-phone} {
                     right: 5%;
                 }
                 @media screen and (max-width: 320px){
                     right: 0;
                 }
             }
-            @media screen and (max-width: 767px){
-                @include font-size(13px);
-            }
         }
     }
-    &__icon{
+    &__icon {
         position: absolute;
-        bottom: 40px;
+        bottom: 50px;
         left: 50%;
-        transform: translate(-50%, -50%);
+        @include transform(translate(-50%, -50%));
         z-index: 1;
-        i{
-            color: #4f565d;
+        i {
+            color: #fff;
             margin-left: 15px;
-            &:hover{
+            opacity: 0.5;
+            &:hover {
                 transition: ease 0.4s;
-                color: #fff;
+                opacity: 1;
             }
         }
     }
     .slick {
-        &__item{
-            img{
+        &__item {
+            img {
                 width: 100%;
                 height: 800px;
                 object-fit: cover;
                 background-size: cover;
                 background-repeat: no-repeat;
-                @media screen and (max-width: 767px){
+                @media #{$info-phone} {
                     height: 600px;
                 }
             }
@@ -117,7 +126,7 @@
             right: 40px;
             transform: translateY(-50%);
             list-style: none;
-            @media screen and (max-width: 767px){
+            @media #{$info-phone} {
                 right: 10px;
             }
             li {

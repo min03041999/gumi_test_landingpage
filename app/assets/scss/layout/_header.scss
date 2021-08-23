@@ -1,62 +1,61 @@
-.navbar.fix__top{
+.navbar.fix__top {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 2;
 }
-.navbar{
+.navbar {
     display: flex;
     width: 100%;
-    height: 75px;
+    height: 70px;
     background-color: rgba(0, 0, 0, 0.5);;
-    &.active{
-        background-color: #0fda94;
+    &.active {
+        background-color: #1ea78d;
         transition: ease 1.3s;
     }
-    &__logo{
+    &__logo {
         display: flex;
         align-items: center;
         justify-content: center;
-        h1{
+        h1 {
             font-family: 'Pacifico', cursive;
             @include font-size(28px);
             margin-right: 50px;
             color: $color-default-lightest;
-            &::after{
+            &::after {
                 content: "";
                 position: absolute;
                 top: 50%;
                 @include transform(translate(25px,-50%));
-                height: 40%;
+                height: 25%;
                 width: 2px;
                 background-color: #103754;    
             }
         }
-        p{
-            color: $color-default;
-            font-family: 'Open Sans', sans-serif;
+        p {
+            color: $color-default-lightest;
             @include font-size(13px);
+            opacity: 0.3;
         }
     }
-    &__menu{
+    &__menu {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        ul{
+        ul {
             list-style-type: none;
             margin:0;
             padding: 0;
-            li{
+            li {
                 position: relative;
                 display: inline;
-                padding: 30px 0px;
+                padding: 27px 0px;
                 margin-left: 30px;
                 color: $color-default-lightest;
                 @include font-size(13px);
                 cursor: pointer;
-                font-family: 'Open Sans', sans-serif;
-                &:hover{
-                    &::after{
+                &:hover {
+                    &::after {
                         content: '';
                         width: calc(100%);
                         height: 2px;
@@ -69,34 +68,34 @@
             }
         }
     }
-    &__sidebar{
+    &__sidebar {
         display: none;
         cursor: pointer;
     }
-    @media screen and (max-width: 767px) {
-        .navbar__sidebar{
+    @media #{$info-phone} {
+        .navbar__sidebar {
             display: block !important;
             @include font-size(25px);
             color: $color-default-lightest;
-            .open{
+            .open {
                 display: none !important;
-                &.active{
+                &.active {
                     display: block !important;
                 }
             }
-            .closes{
+            .closes {
                 display: none !important;
-                &.active{
+                &.active {
                     display: block !important;
                 }
             }
         }
-        .none{
+        .none {
             position: fixed;
             width: 100%;
             background: linear-gradient(140deg,#183e31 10%,#a5f0d6 100%);
             height: 100vh;
-            top: 75px;
+            top: 70px;
             left: 0px;
             padding: 10px;
             transition: all 1.4s ease 0s;
@@ -114,7 +113,7 @@
                  }
                 }
             }
-            &.active{
+            &.active {
                 transition: all 1.4s ease 0s;
                 @include transform(translateX(0px));
             }

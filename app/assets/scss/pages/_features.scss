@@ -6,7 +6,7 @@
     background-color: $color-default;
     &__slick{
         position: inherit !important;
-        margin-top: 70px;
+        margin-top: 67px;
         .slick-arrow{
             display: none !important;
         }
@@ -28,6 +28,7 @@
                     margin-right: 0;
                 }
                 &.slick-active {
+                    border: 1px solid $color-default-darkest;
                     background-color: $color-default-darkest;
                 }
             }
@@ -50,7 +51,6 @@
             .item__content{
                 width: 80%;
                 text-align: left;
-                font-family: 'Open Sans', sans-serif;
                 h2{
                     font-weight: bold;
                     @include font-size(20px);
@@ -61,6 +61,9 @@
                 }
                 p{
                     @include font-size(13px);
+                    line-height: 21px;
+                    color: #062033;
+                    opacity: 0.7;
                 }
             }
         }
