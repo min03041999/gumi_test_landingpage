@@ -4,32 +4,28 @@
     height: 800px;
     text-align: center;
     @media #{$info-phone} {
-        height: 600px;
+        height: 471px;
     }
     &__content {
         position: absolute;
-        top: 460px;
+        width: 100%;
+        top: 450px;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateX(-50%);
         z-index: 1;
         color: $color-default-lightest;
         @media #{$info-phone} {
-            top: 375px;
+            top: 184px;
         }
         h2 {
             font-weight: bold;
             @include font-size(62px);
-            margin-bottom: 22px;
+            margin-bottom: 0;
             span {
                 font-weight: 100;
             }
             @media #{$info-phone} {
-                @include font-size(35px);
-                margin-bottom: 10px;
-            }
-            @media screen and (max-width: 320px){
-                @include font-size(30px);
-                margin-bottom: 10px;
+                font-size: 31px;
             }
         }
         h3 {
@@ -41,16 +37,17 @@
                 color: #0fde95;
             }
             @media #{$info-phone} {
-                @include font-size(22px);
-                margin-bottom: 15px;
+                font-size: 21px;
+                margin-bottom: 18px;
             }
         }
         p {
             position: relative;
             @include font-size(18px);
             opacity: 0.9;
+            display: inline-block;
             @media #{$info-phone} {
-                @include font-size(13px);
+                font-size: 11px;
             }
             &::before,
             &::after {
@@ -60,31 +57,13 @@
                 background-color: #0fda93;
                 @include transform(translateY(-50%));
                 height: 1px;
-                width: 5%;
+                width: 30px;
             }
             &::before {
-                left: 21%;
-                @media #{$info-tablet-horizontal} {
-                    left: 15%;
-                }
-                @media #{$info-phone} {
-                    left: 5%;
-                }
-                @media screen and (max-width: 320px){
-                    left: 0;
-                }
+                left: -60px;
             }
             &::after {
-                right: 21%;
-                @media #{$info-tablet-horizontal} {
-                    right: 15%;
-                }
-                @media #{$info-phone} {
-                    right: 5%;
-                }
-                @media screen and (max-width: 320px){
-                    right: 0;
-                }
+                right: -60px;
             }
         }
     }
@@ -92,12 +71,15 @@
         position: absolute;
         bottom: 50px;
         left: 50%;
-        @include transform(translate(-50%, -50%));
+        @include transform(translateX(-50%));
         z-index: 1;
         i {
             color: #fff;
             margin-left: 15px;
             opacity: 0.5;
+            &:first-child {
+                margin-left: 0;
+            }
             &:hover {
                 transition: ease 0.4s;
                 opacity: 1;
@@ -113,7 +95,7 @@
                 background-size: cover;
                 background-repeat: no-repeat;
                 @media #{$info-phone} {
-                    height: 600px;
+                    height: 471px;
                 }
             }
         }
@@ -128,6 +110,9 @@
             list-style: none;
             @media #{$info-phone} {
                 right: 10px;
+                top: initial;
+                bottom: 47px;
+                transform: translateY(0);
             }
             li {
                 cursor: pointer;
@@ -135,10 +120,14 @@
                 height: 10px;
                 border-radius: 50%;
                 background-color: transparent;
-                border: 1px solid $color-default;
+                border: 1px solid rgba($color: $color-default-lightest, $alpha: 0.2);
                 margin-bottom: 15px;
+                @media #{$info-phone} {
+                    width: 8px;
+                    height: 8px;
+                }
                 &.slick-active {
-                    background-color: #fff;
+                    background-color: $color-default-lightest;
                 }
             }
             button {
@@ -147,6 +136,3 @@
         }
     }
 }
-
-
- 

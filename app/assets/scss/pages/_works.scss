@@ -10,6 +10,10 @@
         justify-content: center;
         @media #{$info-phone} {
             margin-top: 30px;
+            padding: 0 100px;
+        }
+        @media screen and (max-width: 375px) {
+            padding: 0 30px;
         }
         .tablinks {
             border: none;
@@ -19,26 +23,14 @@
             color: #062033;
             border: 1px solid #fff;
             font-weight: bold;
-            padding: 1px 20px;
+            padding: 6px 20px;
             @include font-size(14px);
             &:last-child {
                 margin-right: 0;
             }
-            // @media #{$info-phone} {
-            //     width: calc(100% / 3 - 50px);
-            //     margin: 10px 25px;
-            // }
-            // @media screen and (max-width: 480px) {
-            //     width: calc(100% / 3 - 20px);
-            //     margin: 10px 10px;
-            // }
-            // @media screen and (max-width: 375px) {
-            //     width: calc(100% / 3);
-            //     margin: 5px 0px;
-            // }
-            // @media screen and (max-width: 320px) {
-            //     padding: 0 15px;
-            // }
+            @media #{$info-phone} {
+                padding: 6px 20px;
+            }
         }
         .active {
             border-radius: 5px;
@@ -113,7 +105,7 @@
         transform: translateY(100%);
         opacity: 0;
     }
-    to   {
+    to {
         transform: translateY(0%);
         opacity: 0.9;
     }
