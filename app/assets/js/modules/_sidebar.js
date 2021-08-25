@@ -1,5 +1,5 @@
 var open = document.querySelector('.open');
-var navbarSlide = document.querySelector('.none');
+var navbarSlide = document.querySelector('.sidebar');
 var close = document.querySelector('.closes');
 
 open.addEventListener('click', () => {
