@@ -26,7 +26,7 @@
             @media #{$info-phone} {
                 bottom: 60px;
             }
-            li{
+            li {
                 width: 10px;
                 height: 10px;
                 border-radius: 50%;
@@ -63,7 +63,7 @@
                     }
                     h2 {
                         color: #0eb493;
-                    }      
+                    }
                 }
                 .item__hover {
                     position: relative;
@@ -83,13 +83,13 @@
                         height: 100%;
                         width: 100%;
                         opacity: 0;
-                        transition: .5s ease;
+                        transition: 0.5s ease;
                         background-color: #0eb493;
                         color: $color-default-lightest;
                         padding: 20px 20px 0;
                         text-align: center;
-                        h3 {   
-                            @include font-size(16px);  
+                        h3 {
+                            @include font-size(16px);
                             font-weight: bold;
                             line-height: 24px;
                         }
@@ -107,14 +107,14 @@
                             text-align: center;
                             i {
                                 width: 42px;
-                                background: url('../img/Rectangle.png') no-repeat center center;
+                                background: url("../img/Rectangle.png") no-repeat center center;
                                 background-size: cover;
                                 background-repeat: no-repeat;
                                 color: $color-default-lightest;
                                 line-height: 30px;
                                 @include font-size(24px);
                                 padding: 6px 0;
-                                &:hover{
+                                &:hover {
                                     color: #131414;
                                 }
                                 @media #{$info-phone} {
@@ -144,7 +144,7 @@
         transform: translateY(-100%);
         opacity: 0;
     }
-    to   {
+    to {
         transform: translateY(0%);
         opacity: 0.9;
     }

@@ -52,10 +52,12 @@
                     grid-template-columns: repeat(1, 1fr);
                     gap: 30px 30px;
                     margin-top: 25px;
-                }   
-                .item-01, .item-02, .item-03{
+                }
+                .item-01,
+                .item-02,
+                .item-03 {
                     position: relative;
-                    label{
+                    label {
                         position: absolute;
                         top: 5px;
                         left: 0;
@@ -63,7 +65,7 @@
                         color: #5b646e;
                         @include font-size(13px);
                     }
-                    input{
+                    input {
                         padding-bottom: 20px;
                         width: 100%;
                         box-sizing: border-box;
@@ -92,7 +94,7 @@
                 }
                 .item-03 {
                     order: 3;
-                    grid-column: 1 /  span 2;
+                    grid-column: 1 / span 2;
                     @media #{$info-phone} {
                         grid-column: 1;
                     }
@@ -111,7 +113,7 @@
                     justify-content: center;
                     align-items: center;
                     column-gap: 13px;
-                    &:hover{
+                    &:hover {
                         color: #0eb493;
                     }
                     img {
