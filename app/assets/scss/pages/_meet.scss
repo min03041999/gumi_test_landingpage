@@ -1,0 +1,151 @@
+.meet {
+    position: relative;
+    width: 100%;
+    height: 930px;
+    padding: 100px 0 0;
+    @media #{$info-phone} {
+        height: 800px;
+    }
+    &__slick {
+        position: inherit !important;
+        margin-top: 100px;
+        overflow: hidden;
+        @media #{$info-phone} {
+            margin-top: 50px;
+        }
+        .slick-arrow {
+            display: none !important;
+        }
+        .slick-dots {
+            list-style: none;
+            display: inline-flex;
+            position: absolute;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            bottom: 120px;
+            @media #{$info-phone} {
+                bottom: 60px;
+            }
+            li {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 1px solid $color-default-darker;
+                color: transparent;
+                margin-right: 15px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                &.slick-active {
+                    background-color: $color-default-darkest;
+                    border: 1px solid $color-default-darkest;
+                }
+            }
+            button {
+                display: none !important;
+            }
+        }
+        .slick-slide {
+            margin: 0 15px;
+        }
+        .slick-list {
+            margin: 0 -15px;
+        }
+        .slick__item {
+            width: 270px;
+            .item__content {
+                color: #062033;
+                cursor: pointer;
+                &:hover {
+                    .overlay {
+                        opacity: 0.9;
+                        animation: in-top 1s forwards;
+                    }
+                    h2 {
+                        color: #0eb493;
+                    }
+                }
+                .item__hover {
+                    position: relative;
+                    height: 300px;
+                    img {
+                        display: block;
+                        margin: auto;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                    }
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        height: 100%;
+                        width: 100%;
+                        opacity: 0;
+                        transition: 0.5s ease;
+                        background-color: #0eb493;
+                        color: $color-default-lightest;
+                        padding: 20px 20px 0;
+                        text-align: center;
+                        h3 {
+                            @include font-size(16px);
+                            font-weight: bold;
+                            line-height: 24px;
+                        }
+                        p {
+                            @include font-size(16px);
+                            opacity: 1;
+                            line-height: 24px;
+                        }
+                        &__icon {
+                            position: absolute;
+                            bottom: 0px;
+                            @include transform(translate(-50%, -50%));
+                            display: inline-flex;
+                            column-gap: 4px;
+                            text-align: center;
+                            i {
+                                width: 42px;
+                                background: url("../img/Rectangle.png") no-repeat center center;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                color: $color-default-lightest;
+                                line-height: 30px;
+                                @include font-size(24px);
+                                padding: 6px 0;
+                                &:hover {
+                                    color: #131414;
+                                }
+                                @media #{$info-phone} {
+                                    width: 30px;
+                                    padding: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                h2 {
+                    margin-top: 20px;
+                    @include font-size(18px);
+                    font-weight: bold;
+                }
+                p {
+                    margin-top: 12px;
+                    @include font-size(13px);
+                    opacity: 0.56;
+                }
+            }
+        }
+    }
+}
+@keyframes in-top {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 0.9;
+    }
+}

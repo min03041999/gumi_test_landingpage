@@ -1,0 +1,87 @@
+.features {
+    position: relative;
+    width: 100%;
+    padding: 75px 0;
+    background-color: $color-default;
+    &__slick {
+        position: inherit !important;
+        margin-top: 67px;
+        margin-bottom: 59px;
+        .slick-arrow {
+            display: none !important;
+        }
+        .slick-dots {
+            list-style: none;
+            display: inline-flex;
+            position: absolute;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            bottom: 50px;
+            li {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 1px solid $color-default-darker;
+                color: transparent;
+                margin-right: 15px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                &.slick-active {
+                    border: 1px solid $color-default-darkest;
+                    background-color: $color-default-darkest;
+                }
+            }
+            button {
+                display: none !important;
+            }
+        }
+        .slick__item {
+            display: flex;
+            @media #{$info-phone} {
+                display: inline-grid;
+                row-gap: 11px;
+            }
+            .item {
+                display: flex;
+                width: calc(100% / 3);
+                @media #{$info-phone} {
+                    width: 100%;
+                }
+                .item__img {
+                    width: 20%;
+                    img {
+                        display: block;
+                        margin: auto;
+                        width: 40px;
+                        object-fit: cover;
+                    }
+                }
+                .item__content {
+                    width: 80%;
+                    text-align: left;
+                    h2 {
+                        font-weight: bold;
+                        @include font-size(20px);
+                        margin-bottom: 25px;
+                        @media #{$info-phone} {
+                            font-size: 15px;
+                            line-height: 20px;
+                            margin-bottom: 18px;
+                        }
+                    }
+                    p {
+                        @include font-size(13px);
+                        line-height: 21px;
+                        color: #062033;
+                        opacity: 0.7;
+                        @media #{$info-phone} {
+                            font-size: 10px;
+                            line-height: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

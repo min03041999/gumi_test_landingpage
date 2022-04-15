@@ -1,0 +1,112 @@
+.works {
+    position: relative;
+    width: 100%;
+    padding-top: 100px;
+    .tab {
+        overflow: hidden;
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media #{$info-phone} {
+            margin-top: 30px;
+            padding: 0 100px;
+        }
+        @media screen and (max-width: 375px) {
+            padding: 0 30px;
+        }
+        .tablinks {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background: none;
+            color: #062033;
+            border: 1px solid #fff;
+            font-weight: bold;
+            padding: 6px 20px;
+            @include font-size(14px);
+            &:last-child {
+                margin-right: 0;
+            }
+            @media #{$info-phone} {
+                padding: 6px 20px;
+            }
+        }
+        .active {
+            border-radius: 5px;
+            border: 1px solid #0eb493;
+            background-color: #0eb493;
+            color: $color-default-lightest;
+        }
+    }
+    .tabcontent {
+        margin-top: 37px;
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            &__item {
+                position: relative;
+                width: calc(100% / 4);
+                height: 300px;
+                cursor: pointer;
+                overflow: hidden;
+                @media #{$info-tablet-horizontal} {
+                    width: calc(100% / 3);
+                }
+                @media #{$info-phone} {
+                    width: calc(100% / 2);
+                    height: 200px;
+                }
+                &:hover {
+                    .overlay {
+                        animation: in-bottom 1s forwards;
+                    }
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding: 90px 0;
+                    opacity: 0;
+                    text-align: center;
+                    color: $color-default-lightest;
+                    background-color: #0eb493;
+                    @media #{$info-phone} {
+                        padding: 45px 0;
+                    }
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        object-fit: cover;
+                    }
+                    h2 {
+                        @include font-size(18px);
+                        font-weight: bold;
+                        margin-top: 30px;
+                    }
+                    p {
+                        @include font-size(14px);
+                        margin-top: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes in-bottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 0.9;
+    }
+}
